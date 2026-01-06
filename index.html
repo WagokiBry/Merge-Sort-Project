@@ -63,6 +63,19 @@ function createNestedArrays(arr) {
   return output;
 }
 
+function process(arr) {
+  let sum = 0;
+  let max = -Infinity;
+
+  for (let x of arr) {
+    sum += x;
+    if (x > max) max = x;
+  }
+
+  return { sum, max };
+}
+
+
 
 
     </script>
