@@ -42,6 +42,27 @@ function duplicate(arr) {
   }
   return result;
 }
+function createNestedArrays(arr) {
+  const N = arr.length;
+  // This is the auxiliary space we are measuring:
+  const output = []; 
+
+  for (let i = 0; i < N; i++) {
+    // 1. Create a sub-array (inner array)
+    const innerArray = [];
+    
+    // 2. The inner array size is determined by 'i'
+    for (let j = 0; j <= i; j++) {
+      innerArray.push(arr[j]);
+    }
+    
+    // 3. Add the inner array to the output
+    output.push(innerArray);
+  }
+
+  return output;
+}
+
 
 
     </script>
