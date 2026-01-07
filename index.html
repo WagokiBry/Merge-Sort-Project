@@ -62,12 +62,12 @@ let total = []
   total.push(obj[key]) 
 }
      if(typeof obj[key] === "object"){
-       total.push(getObj(obj[key]))
+       total=total.concat(getObj(obj[key]))
        
      }
   
   }
-  return total.flat(Infinity)
+  return total
 }
 
 console.log(getObj(newData))
