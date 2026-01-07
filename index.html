@@ -47,6 +47,7 @@ const newData = {
       phone: {
       email: "alice@example.com",
       email2: "alice@example.com",
+      email3: "alice@example.com",
       phone: 12345
     }
     }
@@ -57,11 +58,11 @@ const newData = {
 function getObj(obj){
 let total = 0
   for( let key in obj){
-    if(typeof obj[key] !== "object" && typeof obj[key] === "string"){
+    if(typeof obj[key] === "string"){
   total+= 1
 }
     if(typeof obj[key] === "object"){
-     return total +=  getObj(obj[key])
+      total +=  getObj(obj[key])
        
     }
   
