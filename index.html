@@ -8,72 +8,15 @@
 <body>
   <h1>Cubic Time Complexity Function</h1>
     <script>
-  function traverse(obj) {
-  for (let key in obj) {
-    const value = obj[key];
-
-    if (typeof value === "object" && value !== null) {
-      traverse(value); // go deeper
-    } else {
-      console.log(value); // primitive value
-    }
-  }
-}
-
-function sum(arr) {
-  let total = 0;
-  for (let x of arr) {
-    total += x;
-  }
-  return total;
-}
-
-function count(arr) {
-  let total = 0;
-  for (let i = 0; i < arr.length; i++) {
-    total++;
-  }
-  return total;
-}
-function duplicate(arr) {
-  let result = [];
-  for (let x of arr) {
-    result.push(x);
-  }
-  return result;
-}
-function createNestedArrays(arr) {
-  const N = arr.length;
-  // This is the auxiliary space we are measuring:
-  const output = []; 
-
-  for (let i = 0; i < N; i++) {
-    // 1. Create a sub-array (inner array)
-    const innerArray = [];
+  
     
-    // 2. The inner array size is determined by 'i'
-    for (let j = 0; j <= i; j++) {
-      innerArray.push(arr[j]);
-    }
-    
-    // 3. Add the inner array to the output
-    output.push(innerArray);
-  }
+   
+const user = {
+  name: "Bryan",
+  age: 25,
+};
 
-  return output;
-}
 
-function process(arr) {
-  let sum = 0;
-  let max = -Infinity;
-
-  for (let x of arr) {
-    sum += x;
-    if (x > max) max = x;
-  }
-
-  return { sum, max };
-}
 
 
 
