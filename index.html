@@ -56,18 +56,18 @@ const newData = {
 };
 
 function getObj(obj){
-let total = 0
+let total = []
   for( let key in obj){
     if(typeof obj[key] === "string"){
-  total+= 1
+  total.push(obj[key]) 
 }
-    if(typeof obj[key] === "object"){
-      total +=  getObj(obj[key])
+     if(typeof obj[key] === "object"){
+       total.push(getObj(obj[key]))
        
-    }
+     }
   
   }
-  return total
+  return total.flat(1)
 }
 
 console.log(getObj(newData))
