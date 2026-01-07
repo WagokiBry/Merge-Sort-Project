@@ -11,12 +11,30 @@
   
     
    
-const user = {
-  name: "Bryan",
-  age: 25,
+const data = {
+  a: 2,
+  b: {
+    c: 3,
+    d: {
+      e: 5
+    }
+  },
+  f: 1
 };
 
+function addNumber(obj){
+  let total = 0
+  for (key in obj){
+    
+    if(typeof obj[key] !== "object"){
+      total += (obj[key])
+      }
+      total += addNumber(obj[key])
+    }
+    return total
+}
 
+console.log(addNumber(data))
 
 
 
