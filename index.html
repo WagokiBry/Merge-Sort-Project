@@ -11,30 +11,30 @@
   
     
    
-const data = {
-  a: 2,
-  b: {
-    c: 3,
-    d: {
-      e: 5
-    }
-  },
-  f: 1
-};
+// const data = {
+//   a: 2,
+//   b: {
+//     c: 3,
+//     d: {
+//       e: 5
+//     }
+//   },
+//   f: 1
+// };
 
-function addNumber(obj){
-  let total = 0
-  for (key in obj){
+// function addNumber(obj){
+//   let total = 0
+//   for (key in obj){
     
-    if(typeof obj[key] !== "object"){
-      total += (obj[key])
-      }
-      total += addNumber(obj[key])
-    }
-    return total
-}
+//     if(typeof obj[key] !== "object"){
+//       total += (obj[key])
+//       }
+//       total += addNumber(obj[key])
+//     }
+//     return total
+// }
 
-console.log(addNumber(data))
+// console.log(addNumber(data))
 
 const newData = {
   name: "Alice",
@@ -49,8 +49,14 @@ const newData = {
   active: true
 };
 
+function getObj(obj){
 
+  for( let key in obj){
+    console.log(key)
+  }
+}
 
+console.log(getObj(newData))
 
 
     </script>
